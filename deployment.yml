@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: machineinfo
-        image: apoorvasi/kube-machineinfofile:v1.0
+        image: sirasaoapoorva/kube-machineinfofile:v1.0
         ports:
         - containerPort: 9000
