@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-lb-service
+  name: my-cip-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: machineinfo
   ports:
