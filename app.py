@@ -4,7 +4,7 @@ import platform
 
 app = Flask(__name__)
 
-
+API_KEY = "123-456-789"
 #getting the details
 @app.route('/machineinfo')
 
@@ -17,7 +17,7 @@ def machineinfo():
 
 
 
-    return render_template("machineinfo.html", host_name=host_name, host_ip=host_ip, os_name=os_name)
+    return render_template("machineinfo.html", host_name=host_name, host_ip=host_ip, os_name=os_name , API_KEY)
 
 
 if __name__ == '__main__':
