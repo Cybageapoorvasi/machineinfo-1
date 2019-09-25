@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: machineinfo
-        image: sirasaoa/machineinfo:v1.3
+        image: sirasaoa/machineinfo:v1.2
         envFrom:
         - configMapRef:
             name: sample-configmap
