@@ -20,5 +20,8 @@ spec:
         envFrom:
         - configMapRef:
             name: sample-configmap
+        - secretKeyRef:
+              name: sample-secret
+ 
         ports:
         - containerPort: 9000
