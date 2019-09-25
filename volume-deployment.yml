@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: machineinfo-volume
+  labels:
+    app: machineinfo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: machineinfo
+  template:
+    metadata:
+      labels:
+        app: machineinfo
+    spec:
+      containers:
+      - name: machineinfo
+        image: sirasaoa/machineinfo:v1.2
+        volumeMounts:
+        - mountPath: /cache
+          name: cache-volume
+        envFrom:
+        - configMapRef:
+            name: sample-configmap
+      volumes:
+        - name: cache-volume
+          emptyDir: {}
+ 
+        ports:
+        - containerPort: 9000
