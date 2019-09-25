@@ -13,10 +13,11 @@ def machineinfo():
     host_name = socket.gethostname()
     host_ip = socket.gethostbyname(host_name)
     os_name = platform.system()
+    cloud_name = env.cloudName
 
 
 
-    return render_template("machineinfo.html", host_name=host_name, host_ip=host_ip, os_name=os_name)
+    return render_template("machineinfo.html", host_name=host_name, host_ip=host_ip, os_name=os_name , cloud_name=cloudName)
 
 
 if __name__ == '__main__':
