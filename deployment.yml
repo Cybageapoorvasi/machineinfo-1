@@ -17,5 +17,8 @@ spec:
       containers:
       - name: machineinfo
         image: sirasaoa/machineinfo:v1.0
+        envFrom:
+        - configMapRef:
+            name: sample-configmap
         ports:
         - containerPort: 9000
