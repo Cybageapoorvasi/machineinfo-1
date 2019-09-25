@@ -23,8 +23,9 @@ spec:
         envFrom:
         - configMapRef:
             name: sample-configmap
+        ports:
+        - containerPort: 9000
       volumes:
         - name: cache-volume
           emptyDir: {}
-      ports:
-        - containerPort: 9000
+      
