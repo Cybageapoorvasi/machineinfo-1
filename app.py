@@ -17,7 +17,7 @@ def machineinfo():
 
 
 
-    return render_template("machineinfo.html", host_name=host_name, host_ip=host_ip, os_name=os_name , API_KEY)
+    return render_template("machineinfo.html", host_name=host_name, host_ip=host_ip, os_name=os_name , api_key=API_KEY)
 
 
 if __name__ == '__main__':
