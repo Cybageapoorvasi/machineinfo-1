@@ -4,5 +4,5 @@ metadata:
   name: sample-configmap 
 data:
   # Configuration values can be set as key-value properties
-  color : green
+  color : yellow
   
